@@ -14,15 +14,19 @@ int main(void)
 {
     G_LCD mylcd;
 	char buffer[32];
-	
+	uint16_t counter=0;
 	mylcd.LCD_clear();
 	mylcd.LCD_goto_XY(0,0);
-	mylcd.LCD_write_string("HelloWolrd");
+	mylcd.LCD_write_string("Hello Wolrd");
     while (1) 
     {
-		
-		
-		
+	
+	sprintf(buffer,"counter : %d",counter);
+	mylcd.LCD_goto_XY(1,0);
+	mylcd.LCD_write_string(buffer);
+	counter++;
+	_delay_ms(250);
+	
     }
 }
 
