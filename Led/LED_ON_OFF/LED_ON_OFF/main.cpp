@@ -16,11 +16,21 @@ int main(void)
     /* Replace with your application code */
     while (1) 
     {
+<<<<<<< HEAD
 		PORTD = 0x00;
 		_delay_ms(300);
 		PORTD = 0xff;
+=======
+		for(int i = 0 ; i <8; i++){
+		PORTD &= ~(0x01 << i);
+		_delay_ms(300);
+		}
+		for(int i = 0 ; i <8; i++){
+		PORTD |= (0x80 >> i);
+>>>>>>> led_return
 		_delay_ms(300);
 		
     }
 }
+	}
 
